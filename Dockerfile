@@ -1,4 +1,4 @@
-FROM andrewosh/binder-base
+FROM jupyter/scipy-notebook
 MAINTAINER Jonah Kanner <jonah.kanner@ligo.org>
 
 
