@@ -1,1 +1,2 @@
-graphviz
+h5py
+matplotlib
