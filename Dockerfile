@@ -10,6 +10,7 @@ RUN echo 'deb http://software.ligo.org/lscsoft/debian/ jessie contrib' >> /etc/a
 RUN apt-get update
 #RUN apt-get install -y graphviz
 RUN yes | apt-get -y --force-yes install lalframe lal lalsimulation lalsimulation-python lal-python lalframe-python
+
 USER main
 
 ENV PATH /usr/bin:/usr/sbin:/bin:/sbin:/home/main/.local/bin
@@ -19,5 +20,9 @@ ENV PYTHONPATH $PYTHONPATH:/home/main/anaconda/lib/python2.7/site-packages
 ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
+USER root
+ENV PATH /usr/bin:/usr/sbin:/bin:/sbin:/home/main/.local/bin
+ENV PYTHONPATH $PYTHONPATH:/home/main/anaconda/lib/python2.7/site-packages
+RUN pip2 install pycbc
 
 
