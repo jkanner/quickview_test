@@ -19,7 +19,7 @@ ENV PYTHONPATH $PYTHONPATH:/home/main/anaconda/lib/python2.7/site-packages
 # Install requirements for Python 2
 ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-RUN pip2 install -r pycbc --user
+RUN pip2 install pycbc --user
 
 #USER root
 #ENV PATH /usr/bin:/usr/sbin:/bin:/sbin:/home/main/.local/bin
