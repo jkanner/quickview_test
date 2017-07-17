@@ -15,7 +15,7 @@ RUN chmod +x /etc/lal-user-env.sh
 USER main
 RUN echo "source /etc/lal-user-env.sh" >> ~/.bashrc
 RUN echo "source /etc/lal-user-env.sh" >> ~/.profile
-sed -i '2i source /etc/lal-user-env.sh' start-notebook.sh
+RUN sed -i '2i source /etc/lal-user-env.sh' start-notebook.sh
 
 #ENV PATH /usr/bin:/usr/sbin:/bin:/sbin:/home/main/.local/bin
 #ENV PYTHONPATH $PYTHONPATH:/home/main/anaconda/lib/python2.7/site-packages
