@@ -12,7 +12,7 @@ RUN apt-get update
 RUN yes | apt-get -y --force-yes install lalframe lal lalsimulation lalsimulation-python lal-python lalframe-python
 
 USER main
-RUN source /etc/lal-user-env.sh
+RUN /etc/lal-user-env.sh
 
 #ENV PATH /usr/bin:/usr/sbin:/bin:/sbin:/home/main/.local/bin
 #ENV PYTHONPATH $PYTHONPATH:/home/main/anaconda/lib/python2.7/site-packages
