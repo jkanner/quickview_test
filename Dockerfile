@@ -11,6 +11,7 @@ RUN apt-get update
 #RUN apt-get install -y graphviz
 RUN yes | apt-get -y --force-yes install lalframe lal lalsimulation lalsimulation-python lal-python lalframe-python
 
+RUN chmod +x /etc/lal-user-env.sh
 USER main
 RUN /etc/lal-user-env.sh
 
