@@ -9,6 +9,7 @@ USER root
 RUN echo 'deb http://software.ligo.org/lscsoft/debian/ jessie contrib' >> /etc/apt/sources.list
 RUN apt-get update
 #RUN apt-get install -y graphviz
+ENV PATH /home/main/anaconda2/bin:$PATH
 RUN yes | apt-get -y --force-yes install lalframe lal lalsimulation lalsimulation-python lal-python lalframe-python
 
 RUN chmod +x /etc/lal-user-env.sh
